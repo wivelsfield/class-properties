@@ -60,7 +60,7 @@ This may be useful for two reasons:
 1. TypeScript's structural typing means that object literals may include excess properties and remain compatible with a type.
 2. Since we are executing JavaScript there is not always a runtime guarantee that all expected properties are present on an object.
 
-We may need to confirm these assumptions if, for example, handling a data transfer object or passing a model to an ORM.
+We may need to confirm our assumptions of the properties that should be present if, for example, handling a data transfer object or passing a model to an ORM.
 
 This is typically handled through a validation library, but in some scenarios a simpler approach may be sufficient.
 
