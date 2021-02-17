@@ -1,9 +1,8 @@
 # class-properties
 
-Decorate class properties to allow the class's property names to be known at runtime.
+Decorate class properties in TypeScript to allow the class's property names to be known at runtime.
 
-This allows objects to be checked for missing
-or excess properties compared to a class.
+This allows objects to be checked for missing or excess properties compared to a class.
 
 For more comprehensive decorator-based object validation, consider [class-validator](https://github.com/typestack/class-validator).
 
