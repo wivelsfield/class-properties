@@ -9,7 +9,7 @@ For more comprehensive decorator-based object validation, consider [class-valida
 ## Installation
 
 ```
-yarn add class-property
+yarn add class-properties
 ```
 
 ## Usage
