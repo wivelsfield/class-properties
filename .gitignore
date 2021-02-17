@@ -1,0 +1,8 @@
+.DS_Store
+*.code-workspace
+*.tgz
+*.log
+coverage
+dist
+node_modules
+package
