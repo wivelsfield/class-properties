@@ -1,6 +1,7 @@
 .DS_Store
 *.code-workspace
-.coverage
-.husky
+*.tgz
+coverage
 dist
 node_modules
+package

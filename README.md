@@ -47,7 +47,7 @@ const testObject = {
   field3: 'field3',
 };
 
-const result = compareProperties(Test);
+const result = compareProperties(testObject, Test);
 // result.missing = ['field1']
 // result.extra = ['field3']
 ```
