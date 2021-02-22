@@ -1,6 +1,6 @@
 {
   "name": "class-properties",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Decorate class properties in TypeScript so they can be known at runtime",
   "author": "Simon Jones",
   "private": false,
