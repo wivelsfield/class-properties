@@ -1,0 +1,19 @@
+name: Publish npm package
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        registry-url: 'https://registry.npmjs.org'
+    - run: yarn install:ci
+    - run: yarn lint:check
+    - run: yarn format:check
+    - run: yarn test:coverage
+    - run: yarn publish
+      env:
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

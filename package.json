@@ -1,22 +1,23 @@
 {
   "name": "class-properties",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Decorate class properties in TypeScript so they can be known at runtime",
   "author": "Simon Jones",
   "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simon-a-j/class-properties.git"
+    "url": "git+https://github.com/wivelsfield/class-properties.git"
   },
   "bugs": {
-    "url": "https://github.com/simon-a-j/class-properties/issues"
+    "url": "https://github.com/wivelsfield/class-properties/issues"
   },
-  "homepage": "https://github.com/simon-a-j/class-properties#readme",
-  "tags": [
+  "homepage": "https://github.com/wivelsfield/class-properties#readme",
+  "keywords": [
     "typescript",
-    "property-decorator",
-    "validate-properties"
+    "property decorator",
+    "validate properties",
+    "runtime property names"
   ],
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
@@ -31,7 +32,9 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "install:ci": "rm -rf node_modules && yarn install --frozen-lockfile",
-    "prepack": "rm -rf dist && tsc --project tsconfig.build.json"
+    "prepack": "rm -rf dist && tsc --project tsconfig.build.json",
+    "package:version": "echo $npm_package_version",
+    "publish:ci": "yarn publish --non-interactive --new-version `yarn -s package:version`"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13"

@@ -69,10 +69,10 @@ Property names are stored in the `reflect-metadata` store for the class's protot
 
 ## FAQs
 
-###### Is it possible to determine interface properties at runtime?
+**Is it possible to determine interface properties at runtime?**
 
 No. TypeScript interfaces do not exist in compiled JavaScript, and there is no way to decorate them.
 
-###### Are property types or modifiers accessible?
+**Are property types or modifiers accessible?**
 
 No. Only property names are stored. TypeScript types do not exist in compiled JavaScript, so it is not possible to read them via decorator.
