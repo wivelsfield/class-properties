@@ -17,6 +17,32 @@ describe('tests Property decorator', () => {
     expect(properties).toEqual(['field']);
   });
 
+  it('tests getting properties of a class with a constructor', async () => {
+    class Test {
+      @Property()
+      field!: string;
+
+      constructor() {}
+    }
+
+    const properties = getClassProperties(Test);
+    expect(properties).toEqual(['field']);
+  });
+
+  it('tests getting properties of a class with a constructor that has parameters', async () => {
+    class Test {
+      @Property()
+      field!: string;
+
+      constructor(param: string) {
+        this.field = param;
+      }
+    }
+
+    const properties = getClassProperties(Test);
+    expect(properties).toEqual(['field']);
+  });
+
   it('tests getting properties of a class with no decorator', async () => {
     class Test {
       field!: string;
