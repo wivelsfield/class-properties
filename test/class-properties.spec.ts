@@ -22,7 +22,9 @@ describe('tests Property decorator', () => {
       @Property()
       field!: string;
 
-      constructor() {}
+      constructor() {
+        this.field = 'test';
+      }
     }
 
     const properties = getClassProperties(Test);
