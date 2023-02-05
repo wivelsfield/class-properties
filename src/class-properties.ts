@@ -33,7 +33,7 @@ export function Property(): PropertyDecorator {
  * @param targetClass - The class to list property names for.
  **/
 export function getClassProperties(targetClass: {
-  new (): Record<string, any>;
+  new (...args: any[]): Record<string, any>;
 }): string[] {
   return Reflect.getMetadata(KEY, targetClass.prototype) ?? [];
 }
@@ -52,7 +52,7 @@ export function getClassProperties(targetClass: {
  **/
 export function hasProperty(
   targetClass: {
-    new (): Record<string, any>;
+    new (...args: any[]): Record<string, any>;
   },
   propertyName: string,
 ): boolean {
@@ -78,7 +78,7 @@ export function hasProperty(
  */
 export function compareProperties(
   object: Record<string, any>,
-  templateClass: { new (): Record<string, any> },
+  templateClass: { new (...args: any[]): Record<string, any> },
 ): {
   missing: string[];
   extra: string[];
@@ -111,7 +111,7 @@ export function compareProperties(
  */
 export function hasValidProperties(
   object: Record<string, any>,
-  templateClass: { new (): Record<string, any> },
+  templateClass: { new (...args: any[]): Record<string, any> },
 ): boolean {
   const comparison = compareProperties(object, templateClass);
   return comparison.missing.length == 0 && comparison.extra.length == 0;
